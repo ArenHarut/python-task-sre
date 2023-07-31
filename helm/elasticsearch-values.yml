@@ -1,0 +1,16 @@
+replicas: 1
+minimumMasterNodes: 1
+
+esJavaOpts: "-Xmx256m -Xms256m"
+
+resources:
+  limits:
+    cpu: "2000m"
+    memory: "4000Mi"
+
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: "managed"
+  resources:
+    requests:
+      storage: 2Gi

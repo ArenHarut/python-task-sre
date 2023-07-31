@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: python-app
+  labels:
+    app: python-app
+  # annotations:
+  #   service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+spec:
+  selector:
+    app: python-app
+  ports:
+    - name: svcpython
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+  type: ClusterIP
