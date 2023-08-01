@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from elasticsearch import Elasticsearch, NotFoundError
 
 app = Flask(__name__)
-es = Elasticsearch([{'host': 'elasticsearch-master', 'port': 9200, 'scheme': 'http'}])
+es = Elasticsearch([{'host': 'elasticsearch', 'port': 9200, 'scheme': 'http'}])
 
 @app.route('/')
 def health_check():

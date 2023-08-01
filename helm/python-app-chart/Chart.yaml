@@ -1,0 +1,4 @@
+apiVersion: v2
+name: python-app-chart
+description: A Helm chart for Python Application
+version: 0.1.0

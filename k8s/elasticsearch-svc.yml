@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch
+  labels:
+    service: elasticsearch
+spec:
+  type: ClusterIP # Expose the service within the cluster
+  ports:
+    - name: svcpython
+      port: 9200
+      protocol: TCP
+      targetPort: 9200
+  type: ClusterIP
+  selector:
+    service: elasticsearch # Adjust the selector to match the labels of your Elasticsearch StatefulSet pods
