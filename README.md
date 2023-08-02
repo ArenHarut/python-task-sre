@@ -16,4 +16,4 @@ Example you can run from Windows cmd:
 
 `curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"London\", \"population\": 9000000}" http://<external-ip>/city`
 
-`http://<external-ip>/city/London` will return the record that you inputted.
+`http://<external-ip>/city/London` will return the record that you inserted.
